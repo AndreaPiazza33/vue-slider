@@ -34,4 +34,22 @@ const slides = [
         indexImg:0,
       }
     },
+    methods: {
+        nextImg(){
+            if (this.indexImg < slides.length - 1) {
+                    this.indexImg++
+            }
+            else{
+                this.indexImg = 0
+            }
+        },
+        prevImg(){
+            if ( this.indexImg > 0) {
+                this.indexImg--
+            }
+            else{
+                this.indexImg = slides.length -1
+            }
+        },
+    }
   }).mount('#app')
